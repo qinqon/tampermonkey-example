@@ -1,17 +1,39 @@
-<!DOCTYPE html>
 <html>
-<body>
-
-<form action="/action_page.php">
-  <select name="cars">
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="fiat">Fiat</option>
-    <option value="audi">Audi</option>
-  </select>
-  <br><br>
-  <input type="submit">
-</form>
-
-</body>
+	<head>
+		<script>
+			function Search()
+			{
+				var SearchKeyWord=document.getElementById("SearchText").value;
+				var SelLength=document.myform.SearchHighlight.length;
+				for(var i=0; i<SelLength;i++)
+				{
+					var searched_text = document.myform.SearchHighlight.options[i].text;
+					var IsMatch = searched_text.search(SearchKeyWord);
+					if(IsMatch != -1)
+					{
+						document.myform.SearchHighlight.options[i].selected = true;
+						document.myform.SearchHighlight.options[i].style.color = 'red';
+					}
+					else
+					{
+						document.myform.SearchHighlight.options[i].style.color = 'black';
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="myform">
+		<input type="text" name="SearchText" id="SearchText">
+		<input type="button" name="SearchButton" id="SearchButton" value="Search" OnClick="Search();">
+		<select name="SearchHighlight">
+			<option value="1">sample1 test</option>
+			<option value="2">sample2 test1</option>
+			<option value="3">sample3 check</option>
+			<option value="4">sample4</option>
+			<option value="5">sample5</option>
+			<option value="6">sample6</option>
+		</select>
+	</form>	
+	</body>
 </html>
