@@ -2,10 +2,9 @@
 // @name         Add search to form
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @description  Add a replace 'cars' options with a select2 javascript element.
+// @author       quique.llorente@gmail.com
 // @match        https://qinqon.github.io/
-// @grant        GM_log
 // @require http://code.jquery.com/jquery-1.8.3.js
 // @require http://code.jquery.com/ui/1.9.2/jquery-ui.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js
