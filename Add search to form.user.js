@@ -25,5 +25,6 @@ link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css';
 document.getElementsByTagName("head")[0].appendChild(link);
-
-document.getElementById("cars").classList.add('js-example-basic-single');
+var cars = document.getElementById("cars");
+cars.classList.add('js-example-basic-single');
+cars.style = 'width:200px;';
